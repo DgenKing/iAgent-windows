@@ -171,13 +171,43 @@ impl Tool for AppTool {
                 "selector": { "type": "string" },
                 "script": { "type": "string" },
                 "text": { "type": "string" },
-                "fields": { "type": "array" },
+                "fields": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "selector": { "type": "string" },
+                            "name": { "type": "string" },
+                            "id": { "type": "string" },
+                            "label": { "type": "string" },
+                            "placeholder": { "type": "string" },
+                            "value": { "type": "string" },
+                            "checked": { "type": "boolean" }
+                        },
+                        "required": ["value"]
+                    }
+                },
                 // form fill params
                 "request": {
                     "type": "object",
                     "properties": {
                         "url": { "type": "string" },
-                        "fields": { "$ref": "#/properties/fields" },
+                        "fields": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "selector": { "type": "string" },
+                                    "name": { "type": "string" },
+                                    "id": { "type": "string" },
+                                    "label": { "type": "string" },
+                                    "placeholder": { "type": "string" },
+                                    "value": { "type": "string" },
+                                    "checked": { "type": "boolean" }
+                                },
+                                "required": ["value"]
+                            }
+                        },
                         "submit": { "type": "boolean" },
                     }
                 }

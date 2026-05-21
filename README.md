@@ -1,8 +1,11 @@
-# iAgent Windows
+# iAgent Linux
+
+> **Linux port (Ubuntu)** of [benclawbot/iAgent-windows](https://github.com/benclawbot/iAgent-windows).
+> This fork builds and runs natively on Ubuntu: the `iagent` TUI works end-to-end with Claude and OpenAI (Codex) providers, and the `jcode-desktop` dock launches as a native window via winit + wgpu. Windows-only integrations (Office COM, Edge CDP, dictation) are not ported yet.
 
 <div align="center">
 
-### Autonomous AI Agent Runtime for Windows
+### Autonomous AI Agent Runtime for Linux
 
 Persistent desktop AI orchestration with local execution, ambient workflows, provider routing, memory systems, and tool-driven automation.
 iAgent is a next generation autonomous AI agent platform fully integrated into Windows as an ambient agent providing suggestions and minimally intrusive chat dock to help you accomplish more in your tasks, think co-working and full agentic building/researching activities. It can also interact easily with office Tools (Word, Excel, Powerpoint), web Tools (search for you, fill forms,...). It learns you preferences, evolves thanks to its deep memory layer.

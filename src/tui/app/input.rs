@@ -1488,6 +1488,10 @@ fn paste_placeholder(content: &str) -> String {
 }
 
 impl App {
+    fn sync_allowed_tools_from_active_skill(&mut self) {
+        // allowed_tools filtering is enforced at the Agent level, not the TUI App level
+    }
+
     pub(super) fn handle_key_event(&mut self, event: crossterm::event::KeyEvent) {
         // Record the event if recording is active
         use crate::tui::test_harness::{TestEvent, record_event};
